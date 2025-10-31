@@ -15,6 +15,6 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
-app.listen(port, '0.0.0.0', () => {
-    console.log(`Servidor corriendo en el puerto ${port}`);
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Servidor corriendo en el puerto ${PORT}`);
 });
