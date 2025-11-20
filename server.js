@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
@@ -9,7 +10,7 @@ mongoose.connect(DB_URI)
     .then(() => console.log('Conectado a MongoDB Atlas'))
     .catch(err => console.error('Error de conexion: ', err));
 
-app.search('view engine', 'ejs');
+app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
     res.render('index');
